@@ -7,10 +7,11 @@
 
 {% block without_container %}
 <div class="container-fluid" id="homepage_after_login" style="padding: 0; height: 90%">
-  {% if wallpaper.photo %}
-  <img src="{{ wallpaper.photo }}" class="img-fluid">
-  {% else %}
-  <img src="{% static 'images/after_login.jpg' %}" class="img-fluid" alt="">
-  {% endif %}
+
+<div class="main-banner embed-responsive embed-responsive-16by9" id="top">
+    <video autoplay muted loop id="bg-video">
+        <source src="{% static 'images/gym-video.mp4' %}" type="video/mp4"/>
+    </video>
+ 
 </div>
 {% endblock %}
